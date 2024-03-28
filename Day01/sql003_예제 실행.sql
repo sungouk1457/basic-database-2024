@@ -10,3 +10,18 @@ SELECT publisher, price
 - SQL에서는 대소문자 구분없음, 하지만 키워드는 대문자로 사용할것
 - SQL에서는 ;이 필수가 아님, 하지만 중요한 사항에서는 무조건 사용할 것
 */
+
+--김연아 고객의 전화번호를 찾은시오
+--1 step
+SELECT * -- *:ALL이라고 호칭
+  FROM Customer
+
+--2 step(1 step에서 수정)
+SELECT *
+  FROM Customer
+ WHERE [name] = '김연아';
+
+--3 step(2 step에서 수정)
+SELECT [name],phone
+  FROM Customer
+ WHERE [name] = '김연아';
