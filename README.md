@@ -86,5 +86,7 @@ IoT 개발자과정 SQLServer 학습 리포지토리
             - HAVING은 집계함수의 필터로 GROUP BY 뒤에 작성. WHERE절과 필터링이 다르다.
         - 두개 이상의 테이블 질의(Query)
             - 관계형 DB에서 가장 중요한 기법중 하나 : JOIN!
-            - INNER JOIN(내부 조인)
+            - INNER JOIN(내부 조인) https://sql-joins.leopard.in.ua/
             - LEFT|RIGHT OUTER JOIN(외부 조인) - 어느 테이블이 기준인지에 따라서 결과가 상이함
+
+            ![조인](https://github.com/sungouk1457/basic-database-2024/blob/main/images/db004.png)
