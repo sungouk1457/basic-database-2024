@@ -14,6 +14,7 @@ SELECT b.Names AS '도서명'
 	 , b.Price AS '정가'
   FROM bookstbl AS b
  ORDER BY Price DESC
+
 --3. 다음과 같은 결과가 나오도록 SQL 문을 작성하시오.(책을 한번도 빌린적이 없는 회원을 뜻합니다)
 SELECT m.Names AS '회원명'
 	 , m.Levels AS '회원등급'
@@ -21,13 +22,15 @@ SELECT m.Names AS '회원명'
 	 , r.rentalDate AS '대여일'
   FROM membertbl AS m LEFT OUTER JOIN rentaltbl AS r
 	on m.memberIdx = r.memberIdx
- WHERE m.Levels = 'A' AND r.rentalDate IS NULL
+ WHERE r.rentalDate IS NULL
+
 --4. 다음과 같은 결과가 나오도록 SQL 문을 작성하시오.
 SELECT d.Names AS '책 장르'
      , FORMAT(SUM(price),'#,# 원') AS '총합계금액'
   FROM bookstbl AS b,divtbl AS d
  WHERE d.Division = b.Division
  GROUP BY d.Names
+
 --5. 다음과 같은 결과가 나오도록 SQL 문을 작성하시오.
 SELECT ISNULL(d.Names,'--합계--') AS '책 장르'
 	 , COUNT(*) AS '권수'
